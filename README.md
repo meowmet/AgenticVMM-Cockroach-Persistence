@@ -41,4 +41,4 @@ Manipulating memory at the C-pointer level via Python is extremely dangerous, le
 
 ---
 ## 📄 License
-Distributed under the MIT License. See `LICENSE` for more information.
+Distributed under the MIT License. See [LICENSE](LICENSE) for more information.
