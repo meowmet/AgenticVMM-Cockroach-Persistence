@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #00ffff; text-decoration-color: #00ffff}
+.r2 {color: #c0c0c0; text-decoration-color: #c0c0c0; font-weight: bold}
+.r3 {color: #7f7f7f; text-decoration-color: #7f7f7f}
+.r4 {color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold}
+.r5 {color: #bfbf7f; text-decoration-color: #bfbf7f}
+.r6 {color: #7fbfbf; text-decoration-color: #7fbfbf; font-weight: bold}
+.r7 {color: #bf7fbf; text-decoration-color: #bf7fbf}
+.r8 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r9 {color: #008000; text-decoration-color: #008000}
+.r10 {color: #00ff00; text-decoration-color: #00ff00}
+.r11 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r12 {color: #c0c0c0; text-decoration-color: #c0c0c0}
+.r13 {color: #800080; text-decoration-color: #800080}
+.r14 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r15 {color: #808000; text-decoration-color: #808000; font-weight: bold}
+.r16 {color: #808000; text-decoration-color: #808000}
+.r17 {color: #008080; text-decoration-color: #008080}
+.r18 {font-weight: bold}
+.r19 {color: #dfdfdf; text-decoration-color: #dfdfdf; font-weight: bold}
+.r20 {color: #ff00ff; text-decoration-color: #ff00ff; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">╔══════════════════════════════════════════════════════════════════════════════╗</span>
+<span class="r1">║</span> <span class="r2">☠  AgenticVMM — Otomatik CLI Smoke Test</span>                                      <span class="r1">║</span>
+<span class="r1">║</span> <span class="r3">Motor: Qwen2.5-7B  ·  n_ctx=2048  ·  n_seq_max=4</span>                             <span class="r1">║</span>
+<span class="r1">╚══════════════════════════════════════════════════════════════════════════════╝</span>
+
+<span class="r4">[System]</span> <span class="r3">Motor yükleniyor</span><span class="r5">...</span><span class="r3"> </span><span class="r4">(</span><span class="r5">n_ctx</span><span class="r3">=</span><span class="r6">2048</span><span class="r3">, </span><span class="r5">n_seq_max</span><span class="r3">=</span><span class="r6">4</span><span class="r3">, GPU </span><span class="r5">offload</span><span class="r3">=</span><span class="r7">tam</span><span class="r4">)</span>
+  <span class="r8">⟩</span> <span class="r9">Motor hazır: 3022ms  </span><span class="r9">VRAM</span><span class="r9">=</span><span class="r9">4691MB</span>
+
+<span class="r10">───────────────────── </span><span class="r11">ADIM </span><span class="r11">1</span><span class="r11">: Root Üretim — Büyük Prefill</span><span class="r10"> ──────────────────────</span>
+<span class="r2">You »</span> <span class="r12">Türk tarihindeki en önemli savaşı kısaca anlat.</span>
+<span class="r9">╭───────────────────────────────── </span><span class="r8">Assistant</span><span class="r9"> ──────────────────────────────────╮</span>
+<span class="r9">│</span> <span class="r9">Türk tarihindeki en önemli savaş olarak genellikle Kuruğan Muharebesi </span>       <span class="r9">│</span>
+<span class="r9">│</span> <span class="r9">anılmaktadır. Bu muharebe, 1241 yılında Mongol invaziyonunun son aşamasında </span> <span class="r9">│</span>
+<span class="r9">│</span> <span class="r9">gerçekleşmiştir. </span>                                                            <span class="r9">│</span>
+<span class="r9">│</span>                                                                              <span class="r9">│</span>
+<span class="r9">│</span> <span class="r9">Mongol general Sub</span>                                                           <span class="r9">│</span>
+<span class="r9">╰──────────────────────────────────────────────────────────────────────────────╯</span>
+  <span class="r8">⟩</span> <span class="r9">Üretim: 1944ms  </span><span class="r9">kv_pos</span><span class="r9">=</span><span class="r8">81</span><span class="r9">  </span><span class="r9">VRAM</span><span class="r9">=</span><span class="r9">4705MB</span><span class="r9"> </span><span class="r8">(</span><span class="r9">delta</span><span class="r9">=</span><span class="r9">14MB</span><span class="r8">)</span>
+
+<span class="r13">╭─────────────────────────────── </span><span class="r14">🌳 KV-Git Tree</span><span class="r13"> ───────────────────────────────╮</span>
+<span class="r13">│</span> ●── e639d795 (seq=0)                                                         <span class="r13">│</span>
+<span class="r13">│</span>    └─── 99e1ccc1 (seq=0) Türk tarihindeki en önemli savaşı kıs... [HEAD]     <span class="r13">│</span>
+<span class="r13">╰────────────── </span><span class="r7">aktif node=</span><span class="r5">99e1ccc1</span><span class="r7">  seq=</span><span class="r5">0</span><span class="r7">  kv_pos=</span><span class="r5">81</span><span class="r7">  slot=1/4</span><span class="r13"> ───────────────╯</span>
+
+<span class="r10">──────────────────── </span><span class="r15">ADIM </span><span class="r15">2</span><span class="r15">: /branch komik  ← O(</span><span class="r15">1</span><span class="r15">) seq_copy</span><span class="r10"> ────────────────────</span>
+<span class="r2">You »</span> <span class="r12">/branch komik</span>
+  <span class="r15">⟩</span> <span class="r16">Branch açıldı  → </span><span class="r16">node</span><span class="r16">=</span><span class="r16">38e114b0</span><span class="r16">  </span><span class="r16">seq</span><span class="r16">=</span><span class="r15">1</span><span class="r16"> | </span><span class="r2">0.</span><span class="r2">06ms</span><span class="r16">  VRAM </span><span class="r16">delta</span><span class="r16">=</span><span class="r16">0MB</span>
+
+<span class="r13">╭─────────────────────────────── </span><span class="r14">🌳 KV-Git Tree</span><span class="r13"> ───────────────────────────────╮</span>
+<span class="r13">│</span> ●── e639d795 (seq=0)                                                         <span class="r13">│</span>
+<span class="r13">│</span>    └─── 99e1ccc1 (seq=0) Türk tarihindeki en önemli savaşı kıs...            <span class="r13">│</span>
+<span class="r13">│</span>       └─── 38e114b0 (seq=1) [HEAD]                                           <span class="r13">│</span>
+<span class="r13">╰────────────── </span><span class="r7">aktif node=</span><span class="r5">38e114b0</span><span class="r7">  seq=</span><span class="r5">1</span><span class="r7">  kv_pos=</span><span class="r5">81</span><span class="r7">  slot=2/4</span><span class="r13"> ───────────────╯</span>
+
+<span class="r10">────────────────── </span><span class="r8">ADIM </span><span class="r8">3</span><span class="r8">: Yeni Dalda Üretim — Sıfır Prefill</span><span class="r10"> ───────────────────</span>
+<span class="r2">You »</span> <span class="r12">Şimdi bunu komik, eğlenceli bir dille yeniden anlat.</span>
+<span class="r9">╭─────────────────────────── </span><span class="r8">Assistant (komik dal)</span><span class="r9"> ────────────────────────────╮</span>
+<span class="r9">│</span> <span class="r9">Türkçe tarihindeki en önemli savaş, Kuruğan Muharebesi! İşte burada, Mongol </span> <span class="r9">│</span>
+<span class="r9">│</span> <span class="r9">general Sub&#x27;ın bir komik hikaye anlatması:</span>                                   <span class="r9">│</span>
+<span class="r9">│</span>                                                                              <span class="r9">│</span>
+<span class="r9">│</span> <span class="r9">&quot;Merhaba, ben Sub, Mongol generalim. Bugün Türk topraklarında büyük bir</span>      <span class="r9">│</span>
+<span class="r9">╰──────────────────────────────────────────────────────────────────────────────╯</span>
+  <span class="r8">⟩</span> <span class="r9">Üretim </span><span class="r8">(</span><span class="r9">sıfır prefill</span><span class="r8">)</span><span class="r9">: 1934ms  </span><span class="r9">kv_pos</span><span class="r9">=</span><span class="r8">164</span><span class="r9">  </span><span class="r9">VRAM</span><span class="r9">=</span><span class="r9">4705MB</span><span class="r9"> </span><span class="r8">(</span><span class="r9">delta</span><span class="r9">=</span><span class="r9">0MB</span><span class="r8">)</span>
+
+<span class="r13">╭─────────────────────────────── </span><span class="r14">🌳 KV-Git Tree</span><span class="r13"> ───────────────────────────────╮</span>
+<span class="r13">│</span> ●── e639d795 (seq=0)                                                         <span class="r13">│</span>
+<span class="r13">│</span>    └─── 99e1ccc1 (seq=0) Türk tarihindeki en önemli savaşı kıs...            <span class="r13">│</span>
+<span class="r13">│</span>       └─── 38e114b0 (seq=1)                                                  <span class="r13">│</span>
+<span class="r13">│</span>          └─── 48269490 (seq=1) Şimdi bunu komik, eğlenceli bir dille...      <span class="r13">│</span>
+<span class="r13">│</span> [HEAD]                                                                       <span class="r13">│</span>
+<span class="r13">╰────────────── </span><span class="r7">aktif node=</span><span class="r5">48269490</span><span class="r7">  seq=</span><span class="r5">1</span><span class="r7">  kv_pos=</span><span class="r5">164</span><span class="r7">  slot=2/4</span><span class="r13"> ──────────────╯</span>
+
+<span class="r10">──────────────── </span><span class="r11">ADIM </span><span class="r11">4</span><span class="r11">: /checkout &lt;root&gt;  ← Anında Geri Sarma</span><span class="r10"> ─────────────────</span>
+<span class="r2">You »</span> <span class="r12">/checkout e639d795</span>
+  <span class="r11">⟩</span> <span class="r17">Checkout → root </span><span class="r17">node</span><span class="r17">=</span><span class="r17">e639d795</span><span class="r17"> </span><span class="r17">seq</span><span class="r17">=</span><span class="r11">0</span><span class="r17"> | </span><span class="r11">0.</span><span class="r17">01ms</span>
+
+<span class="r13">╭─────────────────────────────── </span><span class="r14">🌳 KV-Git Tree</span><span class="r13"> ───────────────────────────────╮</span>
+<span class="r13">│</span> ●── e639d795 (seq=0) [HEAD]                                                  <span class="r13">│</span>
+<span class="r13">│</span>    └─── 99e1ccc1 (seq=0) Türk tarihindeki en önemli savaşı kıs...            <span class="r13">│</span>
+<span class="r13">│</span>       └─── 38e114b0 (seq=1)                                                  <span class="r13">│</span>
+<span class="r13">│</span>          └─── 48269490 (seq=1) Şimdi bunu komik, eğlenceli bir dille...      <span class="r13">│</span>
+<span class="r13">╰─────────────── </span><span class="r7">aktif node=</span><span class="r5">e639d795</span><span class="r7">  seq=</span><span class="r5">0</span><span class="r7">  kv_pos=</span><span class="r5">0</span><span class="r7">  slot=2/4</span><span class="r13"> ───────────────╯</span>
+
+<span class="r10">─────────────────────────────── </span><span class="r2">📊 Oturum Özeti</span><span class="r10"> ────────────────────────────────</span>
+<span class="r12">╭────────────────────────┬─────────┬────────────┬─────────────────────────╮</span>
+<span class="r12">│</span><span class="r18"> İşlem                  </span><span class="r12">│</span><span class="r18">    Süre </span><span class="r12">│</span><span class="r18"> VRAM Delta </span><span class="r12">│</span><span class="r18"> Not                     </span><span class="r12">│</span>
+<span class="r12">├────────────────────────┼─────────┼────────────┼─────────────────────────┤</span>
+<span class="r12">│</span><span class="r17"> Root Üretim            </span><span class="r12">│</span><span class="r16"> 1944 ms </span><span class="r12">│</span><span class="r13">     +14 MB </span><span class="r12">│</span><span class="r3"> kv_pos=81               </span><span class="r12">│</span>
+<span class="r12">│</span><span class="r17"> </span><span class="r2">/branch (seq_copy)</span><span class="r17">     </span><span class="r12">│</span><span class="r16"> </span><span class="r2">0.06 ms</span><span class="r16"> </span><span class="r12">│</span><span class="r13">      </span><span class="r2">+0 MB</span><span class="r13"> </span><span class="r12">│</span><span class="r3"> </span><span class="r19">O(1) — sıfır prefill</span><span class="r3">    </span><span class="r12">│</span>
+<span class="r12">│</span><span class="r17"> Yeni Dalda Üretim      </span><span class="r12">│</span><span class="r16"> 1934 ms </span><span class="r12">│</span><span class="r13">      +0 MB </span><span class="r12">│</span><span class="r3"> kv_pos=164              </span><span class="r12">│</span>
+<span class="r12">│</span><span class="r17"> /checkout (geri sarma) </span><span class="r12">│</span><span class="r16"> 0.01 ms </span><span class="r12">│</span><span class="r13">       0 MB </span><span class="r12">│</span><span class="r3"> O(1) — pointer değiştir </span><span class="r12">│</span>
+<span class="r12">╰────────────────────────┴─────────┴────────────┴─────────────────────────╯</span>
+
+<span class="r14">/</span><span class="r20">vram</span><span class="r18"> →</span> <span class="r8">4705</span><span class="r9"> MB</span> <span class="r18">(</span>toplam delta: +<span class="r11">14</span> MB motor ömrü boyunca<span class="r18">)</span>
+
+</code></pre>
+</body>
+</html>

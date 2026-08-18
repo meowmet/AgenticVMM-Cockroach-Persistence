@@ -1,0 +1,38 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ 📊 GERÇEK BASELINE KARŞILAŞTIRMASI                                           ║
+║                                                                              ║
+║ A Yolu: Geleneksel (Her dal için tam Prefill)                                ║
+║ B Yolu: AgenticVMM (seq_copy ile O(1) dal açma)                              ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+
+▶ B Yolu: AgenticVMM (seq_copy) Başlıyor...
+
+▶ A Yolu: Geleneksel (Full Prefill) Başlıyor...
+
+                  📈 Baseline Karşılaştırması (Latency Eğrisi)                  
+╭──────────────────┬─────────────────────────────┬─────────────────────────────╮
+│                  │ Geleneksel (Full Prefill)   │ AgenticVMM (seq_copy)       │
+│ Dal No           │ Latency                     │ Latency                     │
+├──────────────────┼─────────────────────────────┼─────────────────────────────┤
+│ Dal 1            │ 485.5 ms                    │ 0.22 ms                     │
+│ Dal 2            │ 605.4 ms                    │ 0.27 ms                     │
+│ Dal 3            │ 605.1 ms                    │ 0.25 ms                     │
+│ Dal 4            │ 603.7 ms                    │ 0.27 ms                     │
+│ Dal 5            │ 605.7 ms                    │ 0.24 ms                     │
+│ Dal 6            │ 605.9 ms                    │ 0.34 ms                     │
+│ Dal 7            │ 606.2 ms                    │ 0.25 ms                     │
+├──────────────────┼─────────────────────────────┼─────────────────────────────┤
+│ Ortalama Latency │ 588.2 ms                    │ 0.26 ms                     │
+╰──────────────────┴─────────────────────────────┴─────────────────────────────╯
+                                                                                
+  Dürüst VRAM Metrikleri ve Açıklama:                                           
+  llama.cpp motoru `n_ctx` boyutundaki KV-Cache havuzunu (bu testte ~896 MB)    
+  motor başlarken blok halinde rezerve eder. Bu yüzden çalışma anındaki 'VRAM   
+  Şişmesi (Delta)' geleneksel yöntemde de, AgenticVMM'de de düşük (10-20 MB)    
+  görünür. Ancak asıl kazanç bellekte değil, TEKRAR HESAPLAMA (Prefill)         
+  MALİYETİNİN YOK OLMASIDIR.                                                    
+                                                                                
+  Geleneksel yöntem aynı bağlamı her dal için sıfırdan prefill ederken (bağlam  
+  uzadıkça süre artar), AgenticVMM pointer seviyesinde kopyalama yaparak O(1)   
+  maliyetle anında çoğaltır.                                                    
+                                                                                

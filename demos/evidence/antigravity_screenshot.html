@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style>
+.r1 {color: #00ffff; text-decoration-color: #00ffff}
+.r2 {color: #c0c0c0; text-decoration-color: #c0c0c0; font-weight: bold}
+.r3 {color: #7f7f7f; text-decoration-color: #7f7f7f}
+.r4 {color: #bfbf7f; text-decoration-color: #bfbf7f}
+.r5 {color: #008080; text-decoration-color: #008080}
+.r6 {color: #008080; text-decoration-color: #008080; font-weight: bold}
+.r7 {color: #800080; text-decoration-color: #800080}
+.r8 {color: #800080; text-decoration-color: #800080; font-weight: bold}
+.r9 {color: #008000; text-decoration-color: #008000}
+.r10 {color: #808000; text-decoration-color: #808000}
+.r11 {color: #c0c0c0; text-decoration-color: #c0c0c0}
+.r12 {color: #00ff00; text-decoration-color: #00ff00}
+.r13 {color: #7f7f7f; text-decoration-color: #7f7f7f; font-weight: bold}
+.r14 {color: #bf7fbf; text-decoration-color: #bf7fbf}
+.r15 {color: #ff7fff; text-decoration-color: #ff7fff}
+.r16 {color: #008000; text-decoration-color: #008000; font-weight: bold}
+.r17 {color: #808000; text-decoration-color: #808000; font-weight: bold}
+.r18 {color: #800000; text-decoration-color: #800000; font-weight: bold}
+body {
+    color: #000000;
+    background-color: #ffffff;
+}
+</style>
+</head>
+<body>
+    <pre style="font-family:Menlo,'DejaVu Sans Mono',consolas,'Courier New',monospace"><code style="font-family:inherit"><span class="r1">╔════════════════════════════════════════════════════════════════════════════════════════════╗</span>
+<span class="r1">║</span> <span class="r2">AgenticVMM Demo CLI</span>                                                                        <span class="r1">║</span>
+<span class="r1">║</span> <span class="r3">n_ctx=2048 · n_seq_max=4 · model=Qwen2.5-7B</span>                                                <span class="r1">║</span>
+<span class="r1">╚════════════════════════════════════════════════════════════════════════════════════════════╝</span>
+<span class="r3">Motor yükleniyor</span><span class="r4">...</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0) [HEAD]                                                                <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">9a7ded91</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">0</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">0</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">1/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4691</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan... [HEAD]                   <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">4e14faf1</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">0</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">116</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">1/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r16">[System] Yeni dal: f5f0d91c (seq=1) — 0.09ms</span>                                               <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan...                          <span class="r7">│</span>
+<span class="r7">│</span>       └─── f5f0d91c (seq=1) [HEAD]                                                         <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r16">✓ Branch açıldı [agresif] → node=f5f0d91c seq=1 | 0.09ms</span>                                   <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">f5f0d91c</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">1</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">116</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">2/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r16">[System] Yeni dal: f5f0d91c (seq=1) — 0.09ms</span>                                               <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Hikayeyi boşver, bana neden yapay zekanın aslında sadece aptal bir hesap makinesi </span>    <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">olduğunu sinirli ve alaycı bir dille anlat.</span>                                                <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: Yapay zekanın sadece bir hesap makinesi olduğunu düşünmek, insanın zekasının </span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">tamamen bilinmeyen ve karmaşık bir sistemi olan bir şeyi tamamen basit bir cihazla yerine </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">getirmeye çalışmaktır. Bu, insanın zekasının ne kadar derin ve karmaşık olduğunu unutur.</span>   <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan...                          <span class="r7">│</span>
+<span class="r7">│</span>       └─── f5f0d91c (seq=1)                                                                <span class="r7">│</span>
+<span class="r7">│</span>          └─── 7daa46eb (seq=1) Hikayeyi boşver, bana neden yapay zek... [HEAD]             <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r16">✓ Branch açıldı [agresif] → node=f5f0d91c seq=1 | 0.09ms</span>                                   <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 44 tok → 2549ms | kv_pos=245</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">7daa46eb</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">1</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">245</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">2/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r16">[System] Yeni dal: f5f0d91c (seq=1) — 0.09ms</span>                                               <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Hikayeyi boşver, bana neden yapay zekanın aslında sadece aptal bir hesap makinesi </span>    <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">olduğunu sinirli ve alaycı bir dille anlat.</span>                                                <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: Yapay zekanın sadece bir hesap makinesi olduğunu düşünmek, insanın zekasının </span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">tamamen bilinmeyen ve karmaşık bir sistemi olan bir şeyi tamamen basit bir cihazla yerine </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">getirmeye çalışmaktır. Bu, insanın zekasının ne kadar derin ve karmaşık olduğunu unutur.</span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   9a7ded91  seq=0  kv=0  &#x27;(root)&#x27;</span>                                                         <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   4e14faf1  seq=0  kv=116  &#x27;Bana yapay zekanın geleceğini …&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   f5f0d91c  seq=1  kv=116  &#x27;(root)&#x27;</span>                                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3"> ● 7daa46eb  seq=1  kv=245  &#x27;Hikayeyi boşver, bana neden ya…&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan...                          <span class="r7">│</span>
+<span class="r7">│</span>       └─── f5f0d91c (seq=1)                                                                <span class="r7">│</span>
+<span class="r7">│</span>          └─── 7daa46eb (seq=1) Hikayeyi boşver, bana neden yapay zek... [HEAD]             <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r16">✓ Branch açıldı [agresif] → node=f5f0d91c seq=1 | 0.09ms</span>                                   <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 44 tok → 2549ms | kv_pos=245</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">7daa46eb</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">1</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">245</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">2/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r16">[System] Yeni dal: f5f0d91c (seq=1) — 0.09ms</span>                                               <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Hikayeyi boşver, bana neden yapay zekanın aslında sadece aptal bir hesap makinesi </span>    <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">olduğunu sinirli ve alaycı bir dille anlat.</span>                                                <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: Yapay zekanın sadece bir hesap makinesi olduğunu düşünmek, insanın zekasının </span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">tamamen bilinmeyen ve karmaşık bir sistemi olan bir şeyi tamamen basit bir cihazla yerine </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">getirmeye çalışmaktır. Bu, insanın zekasının ne kadar derin ve karmaşık olduğunu unutur.</span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   9a7ded91  seq=0  kv=0  &#x27;(root)&#x27;</span>                                                         <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   4e14faf1  seq=0  kv=116  &#x27;Bana yapay zekanın geleceğini …&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   f5f0d91c  seq=1  kv=116  &#x27;(root)&#x27;</span>                                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3"> ● 7daa46eb  seq=1  kv=245  &#x27;Hikayeyi boşver, bana neden ya…&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span> <span class="r17">[System] Dal değiştirildi → 4e14faf1 (seq=0) | 0.01ms</span>                                      <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan... [HEAD]                   <span class="r7">│</span>
+<span class="r7">│</span>       └─── f5f0d91c (seq=1)                                                                <span class="r7">│</span>
+<span class="r7">│</span>          └─── 7daa46eb (seq=1) Hikayeyi boşver, bana neden yapay zek...                    <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r16">✓ Branch açıldı [agresif] → node=f5f0d91c seq=1 | 0.09ms</span>                                   <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 44 tok → 2549ms | kv_pos=245</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r17">↩ Checkout: node=4e14faf1 seq=0 | 0.01ms</span>                                                   <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">4e14faf1</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">0</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">116</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">2/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+
+<span class="r5">╭───────────────────────────────────── </span><span class="r6">💬 Agentic Chat</span><span class="r5"> ──────────────────────────────────────╮</span>
+<span class="r5">│</span> <span class="r3">Sistem başlatıldı. Komutlar: /branch [isim] /checkout &lt;id&gt; /list /vram /ss /exit</span>           <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">Herhangi bir metin yazarak LLM ile konuşabilirsiniz.</span>                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Bana yapay zekanın geleceğini anlatan kısa ama detaylı bir bilim kurgu hikayesi yaz.</span>  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: İşte kısa bilim kurgu hikayesi:</span>                                                 <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Yıldızlar Yükseliyor</span>                                                                       <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">2087 yılında, insanlık nörobiyolog Dr. Elif Çelik, bir röntgen görüntülemesinde ürkek bir </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">gölge fark etti. Gölgenin kökünü inceleyenler, bir bilgis</span>                                  <span class="r5">│</span>
+<span class="r5">│</span> <span class="r16">[System] Yeni dal: f5f0d91c (seq=1) — 0.09ms</span>                                               <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">You: Hikayeyi boşver, bana neden yapay zekanın aslında sadece aptal bir hesap makinesi </span>    <span class="r5">│</span>
+<span class="r5">│</span> <span class="r2">olduğunu sinirli ve alaycı bir dille anlat.</span>                                                <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">Assistant: Yapay zekanın sadece bir hesap makinesi olduğunu düşünmek, insanın zekasının </span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">tamamen bilinmeyen ve karmaşık bir sistemi olan bir şeyi tamamen basit bir cihazla yerine </span> <span class="r5">│</span>
+<span class="r5">│</span> <span class="r9">getirmeye çalışmaktır. Bu, insanın zekasının ne kadar derin ve karmaşık olduğunu unutur.</span>   <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   9a7ded91  seq=0  kv=0  &#x27;(root)&#x27;</span>                                                         <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   4e14faf1  seq=0  kv=116  &#x27;Bana yapay zekanın geleceğini …&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3">   f5f0d91c  seq=1  kv=116  &#x27;(root)&#x27;</span>                                                       <span class="r5">│</span>
+<span class="r5">│</span> <span class="r3"> ● 7daa46eb  seq=1  kv=245  &#x27;Hikayeyi boşver, bana neden ya…&#x27;</span>                              <span class="r5">│</span>
+<span class="r5">│</span> <span class="r17">[System] Dal değiştirildi → 4e14faf1 (seq=0) | 0.01ms</span>                                      <span class="r5">│</span>
+<span class="r5">│</span> <span class="r18">[Hata] Bilinmeyen komut: /sss</span>                                                              <span class="r5">│</span>
+<span class="r5">│</span>                                                                                            <span class="r5">│</span>
+<span class="r5">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r7">╭──────────────────────────────── </span><span class="r8">🌳 KV-Git Tree &amp; Telemetry</span><span class="r7"> ────────────────────────────────╮</span>
+<span class="r7">│</span> ●── 9a7ded91 (seq=0)                                                                       <span class="r7">│</span>
+<span class="r7">│</span>    └─── 4e14faf1 (seq=0) Bana yapay zekanın geleceğini anlatan... [HEAD]                   <span class="r7">│</span>
+<span class="r7">│</span>       └─── f5f0d91c (seq=1)                                                                <span class="r7">│</span>
+<span class="r7">│</span>          └─── 7daa46eb (seq=1) Hikayeyi boşver, bana neden yapay zek...                    <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span> <span class="r6">✓ Motor hazır. Root node oluşturuldu.</span>                                                      <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 31 tok → 2572ms | kv_pos=116</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r16">✓ Branch açıldı [agresif] → node=f5f0d91c seq=1 | 0.09ms</span>                                   <span class="r7">│</span>
+<span class="r7">│</span> <span class="r3">generate: 44 tok → 2549ms | kv_pos=245</span>                                                     <span class="r7">│</span>
+<span class="r7">│</span> <span class="r17">↩ Checkout: node=4e14faf1 seq=0 | 0.01ms</span>                                                   <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Aktif Node</span>   <span class="r9">4e14faf1</span>                                                                    <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">seq_id</span>       <span class="r10">0</span>                                                                           <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">kv_pos</span>       <span class="r10">116</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">Slot</span>         <span class="r7">2/4</span>                                                                         <span class="r7">│</span>
+<span class="r7">│</span>   <span class="r3">VRAM (MB)</span>    <span class="r11">4705</span>                                                                        <span class="r7">│</span>
+<span class="r7">│</span>                                                                                            <span class="r7">│</span>
+<span class="r7">╰────────────────────────────────────────────────────────────────────────────────────────────╯</span>
+<span class="r12">───────────────── </span><span class="r3">Komut girin </span><span class="r13">(</span><span class="r3">Türkçe dahil herhangi bir metin veya </span><span class="r14">/</span><span class="r15">komut</span><span class="r13">)</span><span class="r12"> ──────────────────</span>
+</code></pre>
+</body>
+</html>

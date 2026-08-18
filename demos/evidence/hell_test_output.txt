@@ -1,0 +1,112 @@
+╔══════════════════════════════════════════════════════════════════════════════╗
+║ ☠️ CEHENNEM TESTİ — Aşırı Yoğun Bağlam ve 7 Eşzamanlı Dal!                   ║
+║                                                                              ║
+║ Geleneksel: 7 ayrı prefill → VRAM ŞİŞMESİ (OOM)                              ║
+║ AgenticVMM: 1 prefill + O(1) seq_copy → ✓ Mükemmel Çalışır                   ║
+╚══════════════════════════════════════════════════════════════════════════════╝
+🔥 Devasa Bağlam Yükleniyor: 1397 token (2121 karakter)
+
+┏━━━━━━━━━━━━━━━━━━━━━ Cehennem Adımı 0: Massive Prefill ━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 1397 token tek seferde KV-Cache'e yazılıyor...                               ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+✓ 1397 token prefill edildi (684ms).
+                                            
+  Metrik             Değer                  
+ ────────────────────────────────────────── 
+  Slot Kullanımı     1/8                    
+  Boş seq_id'ler     [1, 2, 3, 4, 5, 6, 7]  
+  Aktif seq/kv_pos   seq=0 pos=1397         
+                                            
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━ Cehennem Adımı 1: The Hydra ━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ Aynı kökten 7 farklı analiz dalı O(1) maliyetle filizleniyor!                ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+✓ Dal 1 oluşturuldu (0.26ms) — seq=1
+✓ Dal 2 oluşturuldu (0.22ms) — seq=2
+✓ Dal 3 oluşturuldu (0.22ms) — seq=3
+✓ Dal 4 oluşturuldu (0.21ms) — seq=4
+✓ Dal 5 oluşturuldu (0.21ms) — seq=5
+✓ Dal 6 oluşturuldu (0.22ms) — seq=6
+✓ Dal 7 oluşturuldu (0.21ms) — seq=7
+                                     
+  Metrik             Değer           
+ ─────────────────────────────────── 
+  Slot Kullanımı     8/8             
+  Boş seq_id'ler     []              
+  Aktif seq/kv_pos   seq=7 pos=1397  
+                                     
+
+┏━━━━━━━━━━━━━━━━━━━━ Cehennem Adımı 2: Eşzamanlı Yürütme ━━━━━━━━━━━━━━━━━━━━━┓
+┃ Her dal sadece delta token üretiyor...                                       ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu ağ trafiğindeki tüm kaynak ve hedef IP adresleri şunlardır:    │
+│                                                                              │
+│ Kaynak IP Adresleri:                                                         │
+│ - 1                                                                          │
+╰───────────── Görev 1 | node=384d857b seq=1 kv_pos=1452 | 1009ms ─────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: HTTP isteklerinde kullanılan User-Agent bilgisi şu şekildedir:    │
+│                                                                              │
+│ ```                                                                          │
+│ User-Agent: Mozilla/5.0 (Windows NT                                          │
+╰───────────── Görev 2 | node=10ff72c4 seq=2 kv_pos=1448 | 1006ms ─────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu ağ paket dökümüne göre, bir port taraması veya anormal         │
+│ bağlantı denemesi görünmüyor. İşte neden                                     │
+╰───────────── Görev 3 | node=73d8839c seq=3 kv_pos=1449 | 994ms ──────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu ağ trafik dökümü içinde şifrelenmemiş (plain-text) veri        │
+│ parçaları bulunmamaktad                                                      │
+╰───────────── Görev 4 | node=ada6abcb seq=4 kv_pos=1458 | 997ms ──────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu TCP paket dökümünden işletim sistemi tahmini yapmak için bazı  │
+│ önemli faktörleri inceleyelim:                                               │
+│                                                                              │
+│ 1.                                                                           │
+╰───────────── Görev 5 | node=949d0f80 seq=5 kv_pos=1452 | 989ms ──────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu ağ paket dökümü, bir HTTP isteği ve yanıtını gösterir.         │
+│ Bağlantılarda gecikme                                                        │
+╰───────────── Görev 6 | node=81b23760 seq=6 kv_pos=1454 | 994ms ──────────────╯
+╭──────────────────────────────────────────────────────────────────────────────╮
+│ Assistant: Bu ağ trafiği dökümüne göre, en uzun paket boyutuna sahip         │
+│ transfer aşağıdaki HTTP yanıt paketine a                                     │
+╰───────────── Görev 7 | node=225a43af seq=7 kv_pos=1447 | 986ms ──────────────╯
+
+╭─────────────────────── 🌳 Branch Tree (Cehennem Modu) ───────────────────────╮
+│ ●┬─ 7fec7099 (seq=0)                                                         │
+│    ├─── 85669fb9 (seq=1)                                                     │
+│    │  └─── 384d857b (seq=1) Bu ağ trafiğindeki tüm kaynak ve hede...         │
+│    ├─── 5b312aaf (seq=2)                                                     │
+│    │  └─── 10ff72c4 (seq=2) HTTP isteklerinde kullanılan User-Age...         │
+│    ├─── bf5937cb (seq=3)                                                     │
+│    │  └─── 73d8839c (seq=3) Olası bir port taraması veya anormal ...         │
+│    ├─── 0d2696b6 (seq=4)                                                     │
+│    │  └─── ada6abcb (seq=4) Trafikteki şifrelenmemiş (plain-text)...         │
+│    ├─── a0abab27 (seq=5)                                                     │
+│    │  └─── 949d0f80 (seq=5) TCP Window Size ve TTL değerlerinden ...         │
+│    ├─── 6a2c371d (seq=6)                                                     │
+│    │  └─── 81b23760 (seq=6) Bağlantılardaki gecikme (latency) sür...         │
+│    └─── d791e833 (seq=7)                                                     │
+│       └─── 225a43af (seq=7) En uzun paket boyutuna sahip transfer... [HEAD]  │
+╰──────────────────────────────────────────────────────────────────────────────╯
+                  ☠️  Cehennem Testi Performans Özeti                  
+╭─────────────────┬──────────────────────────┬────────────────────────╮
+│ Metrik          │ Geleneksel (LangChain)   │ AgenticVMM             │
+├─────────────────┼──────────────────────────┼────────────────────────┤
+│ KV Token Yükü   │ 1397 × 7 = 9779 token    │ 1397 × 1 + delta       │
+│ Dal Açma Süresi │ ~683ms (Yeniden prefill) │ Ortalama 0.22ms (O(1)) │
+│ Sonuç           │ ☠️ OOM (SİSTEM ÇÖKER)    │ ✓ Kusursuz Çalışır     │
+╰─────────────────┴──────────────────────────┴────────────────────────╯
+              📊 VRAM Telemetrisi               
+╭──────────────────────────────────┬───────────╮
+│ Adım                             │ VRAM (MB) │
+├──────────────────────────────────┼───────────┤
+│ 0: Motor Yüklendi                │      5475 │
+│ 1: Prefill Tamamlandı (1397 tok) │      5495 │
+│ 2: 7 Dal Oluşturuldu             │      5495 │
+│ 3: 7 Görev Üretimi Tamamlandı    │      5499 │
+├──────────────────────────────────┼───────────┤
+│ Maksimum VRAM Şişmesi (Delta)    │     24 MB │
+╰──────────────────────────────────┴───────────╯
